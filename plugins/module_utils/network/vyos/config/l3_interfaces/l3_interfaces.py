@@ -19,12 +19,11 @@ from copy import deepcopy
 from ansible.module_utils.network.common.cfg.base import ConfigBase
 from ansible.module_utils.network.common.utils import to_list, remove_empties
 from ansible.module_utils.six import iteritems
-from ansible_collections.vyos.vyos.plugins.module_utils.network. \
-  vyos.facts.facts import Facts
+from ansible_collections.vyos.vyos.plugins.module_utils.network.vyos.facts.facts \
+    import Facts
 
-from ansible_collections.vyos.vyos.plugins.module_utils.network. \
-  vyos.utils.utils import search_obj_in_list, get_interface_type, diff_list_of_dicts
-
+from ansible_collections.vyos.vyos.plugins.module_utils.network.vyos.utils.utils \
+    import search_obj_in_list, get_interface_type, diff_list_of_dicts
 
 
 class L3_interfaces(ConfigBase):

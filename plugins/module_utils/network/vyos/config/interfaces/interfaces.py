@@ -17,12 +17,11 @@ from copy import deepcopy
 from ansible.module_utils.network.common.cfg.base import ConfigBase
 from ansible.module_utils.network.common.utils import to_list, dict_diff, remove_empties
 from ansible.module_utils.six import iteritems
-from ansible_collections.vyos.vyos.plugins.module_utils.network. \
-  vyos.facts.facts import Facts
+from ansible_collections.vyos.vyos.plugins.module_utils.network.vyos.facts.facts \
+    import Facts
 
-from ansible_collections.vyos.vyos.plugins.module_utils.network. \
-  vyos.utils.utils import search_obj_in_list, get_interface_type, dict_delete
-
+from ansible_collections.vyos.vyos.plugins.module_utils.network.vyos.utils.utils \
+    import search_obj_in_list, get_interface_type, dict_delete
 
 
 class Interfaces(ConfigBase):
