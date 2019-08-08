@@ -17,9 +17,8 @@ __metaclass__ = type
 from re import findall, M
 from copy import deepcopy
 from ansible.module_utils.network.common import utils
-from ansible_collections.vyos.vyos.plugins.module_utils.network. \
-  vyos.argspec.interfaces.interfaces import InterfacesArgs
-
+from ansible_collections.vyos.vyos.plugins.module_utils.network.vyos.argspec.interfaces.interfaces \
+    import InterfacesArgs
 
 
 class InterfacesFacts(object):
