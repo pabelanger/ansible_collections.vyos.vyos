@@ -1,6 +1,7 @@
 - project:
     check:
       jobs:
+        - ansible-test-network-integration-vyos-python27
         - ansible-tox-linters
     gate:
       jobs:
