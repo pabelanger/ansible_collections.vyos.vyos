@@ -27,8 +27,8 @@
         - results.failed
 
   always:
-  - name: delete user
-    vyos.vyos.vyos_user:
-      name: auth_user
-      state: absent
-    register: result
+    - name: delete user
+      vyos.vyos.vyos_user:
+        name: auth_user
+        state: absent
+      register: result

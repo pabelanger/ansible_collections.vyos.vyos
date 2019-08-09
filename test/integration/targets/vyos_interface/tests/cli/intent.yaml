@@ -48,7 +48,7 @@
   vyos.vyos.vyos_interface:
     name: eth0
     neighbors:
-    - port: eth0
+      - port: eth0
   when: run_lldp_tests
   register: result
 
@@ -73,8 +73,8 @@
   vyos.vyos.vyos_interface:
     name: eth0
     neighbors:
-    - port: dummy_port
-      host: dummy_host
+      - port: dummy_port
+        host: dummy_host
   ignore_errors: yes
   when: run_lldp_tests
   register: result
@@ -113,9 +113,9 @@
 - name: Aggregate config + intent (pass)
   vyos.vyos.vyos_interface:
     aggregate:
-    - name: eth1
-      enabled: True
-      state: up
+      - name: eth1
+        enabled: True
+        state: up
   ignore_errors: yes
   register: result
 
@@ -126,9 +126,9 @@
 - name: Check lldp neighbors intent aggregate arguments
   vyos.vyos.vyos_interface:
     aggregate:
-    - name: eth0
-      neighbors:
-      - port: eth0
+      - name: eth0
+        neighbors:
+          - port: eth0
   when: run_lldp_tests
   register: result
 
@@ -140,11 +140,11 @@
 - name: Check lldp neighbors intent aggregate arguments (failed)
   vyos.vyos.vyos_interface:
     aggregate:
-    - name: eth0
-      neighbors:
-      - port: eth0
-      - port: dummy_port
-        host: dummy_host
+      - name: eth0
+        neighbors:
+          - port: eth0
+          - port: dummy_port
+            host: dummy_host
   ignore_errors: yes
   when: run_lldp_tests
   register: result
