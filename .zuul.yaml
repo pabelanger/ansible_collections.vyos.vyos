@@ -1,7 +1,31 @@
 - project:
     check:
       jobs:
+        - ansible-test-network-integration-vyos-python27:
+            vars:
+              ansible-test-collection: True
+        - ansible-test-network-integration-vyos-python35:
+            vars:
+              ansible-test-collection: True
+        - ansible-test-network-integration-vyos-python36:
+            vars:
+              ansible-test-collection: True
+        - ansible-test-network-integration-vyos-python37:
+            vars:
+              ansible-test-collection: True
         - ansible-tox-linters
     gate:
       jobs:
+        - ansible-test-network-integration-vyos-python27:
+            vars:
+              ansible-test-collection: True
+        - ansible-test-network-integration-vyos-python35:
+            vars:
+              ansible-test-collection: True
+        - ansible-test-network-integration-vyos-python36:
+            vars:
+              ansible-test-collection: True
+        - ansible-test-network-integration-vyos-python37:
+            vars:
+              ansible-test-collection: True
         - ansible-tox-linters
