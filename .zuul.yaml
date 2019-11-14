@@ -1,0 +1,5 @@
+- project:
+    check:
+      jobs:
+        - release-ansible-galaxy-collection:
+            nodeset: centos-8-1vcpu
